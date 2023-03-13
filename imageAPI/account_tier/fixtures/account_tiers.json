@@ -1,0 +1,40 @@
+[
+  {
+    "model": "account_tier.AccountTier",
+    "pk": "1",
+    "fields": {
+      "name": "Basic",
+      "thumbnail_sizes": [
+        200
+      ],
+      "link_to_original": false,
+      "expiring_links": false
+    }
+  },
+  {
+    "model": "account_tier.AccountTier",
+    "pk": "2",
+    "fields": {
+      "name": "Premium",
+      "thumbnail_sizes": [
+        200,
+        400
+      ],
+      "link_to_original": true,
+      "expiring_links": false
+    }
+  },
+    {
+    "model": "account_tier.AccountTier",
+    "pk": "3",
+    "fields": {
+      "name": "Enterprise",
+      "thumbnail_sizes": [
+        200,
+        400
+      ],
+      "link_to_original": true,
+      "expiring_links": true
+    }
+  }
+]
