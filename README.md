@@ -44,8 +44,7 @@ The APIs are secured using JSON Web Tokens (JWT), and only authenticated users c
     - Using a RESTful API client like Postman, send a **POST** request to _http://localhost:8000/api/token/_ with the
       username and password of the user you just created in the request body. This will return an access token.
       With the access token, you can now send a **POST** request to http://localhost:8000/api/images/ to upload an image
-      to
-      your S3 bucket.
+      to your S3 bucket. Name of uploaded file is taken from Content-Disposition header, from filename.
 4. Endpoints.
     - _http://localhost:8000/token/_ [**POST**] returns access and refresh token if user credentials are correct.
     - _http://localhost:8000/image/upload_ [**POST**] uploads image. In postman, file has to be uploaded with binary
@@ -58,4 +57,5 @@ The APIs are secured using JSON Web Tokens (JWT), and only authenticated users c
 5. TODO
     - Unfortunately, I was not able to write quite important test, which kinda is crucial to all tests. It's sense was
       to test uploading file by user. I added comment in code **/imageAPI/image/tests.py**. Feel free to give me
-      feedback or advices. It will be handled in the future.
+      feedback or advices. It will be handled in the future. Also I will be changing way of uploading the images, so that user won't have to add Conten
+      t-Disposition header by hand.
