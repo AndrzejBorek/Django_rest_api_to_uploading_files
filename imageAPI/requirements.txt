@@ -6,3 +6,6 @@ djangorestframework-simplejwt==5.2.2
 django-storages==1.13.2
 boto3==1.26.86
 sqlalchemy==1.4.36
+pytest==7.2.2
+pytest-django==4.5.2
+pytest-drf==1.1.3

@@ -12,10 +12,12 @@ User = get_user_model()
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True, related_name='user_profile')
     account_tier = models.ForeignKey(AccountTier, on_delete=models.SET_NULL, null=True, blank=True)
-    images = models.ManyToManyField('image.Image', blank=True)
 
     def __str__(self):
         return self.user.username
+
+    class Meta:
+        db_table = 'user_profile'
 
 
 @receiver(post_save, sender=User)
